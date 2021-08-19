@@ -15,8 +15,6 @@ RUN set -ex; \
         sudo \
         vim \
 	python3-pip \
-	python3-pyrogram \
-	python3-tgcrypto \
 	mysql-server \
 	vlc \
         bash \
@@ -54,7 +52,8 @@ RUN set -ex; \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
-
+RUN pip install pyrogram
+RUN pip install tgcrypto
 RUN sudo apt-get update && sudo apt-get install -y obs-studio
 
 COPY . /app
