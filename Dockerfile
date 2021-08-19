@@ -15,6 +15,8 @@ RUN set -ex; \
         sudo \
         vim \
 	python3-pip \
+	python3-pyrogram \
+	python3-tgcrypto \
 	mysql-server \
 	vlc \
         bash \
